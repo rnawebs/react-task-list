@@ -4,7 +4,12 @@ import axios from "axios";
 import { API_URL } from "../utils";
 import React, { useState } from "react";
 
-const UpdateTaskForm = ({ isDialogOpen, setIsDialogOpen, task }) => {
+const UpdateTaskForm = ({
+  fetchTasks,
+  isDialogOpen,
+  setIsDialogOpen,
+  task,
+}) => {
   const { id, completed } = task;
   const [taskName, setTaskName] = useState("");
 
